@@ -2,9 +2,9 @@
 
 /*
  * Plugin Name: Webfronten Site Codes
- * Plugin URI: 
+ * Plugin URI: https://github.com/Webfronten/Site-Codes/
  * Description: Site specific code changes for websites build by Webfronten.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Torben Heikel Vinther
  * Author URI: http://www.webfronten.dk/
  * License: GPL v2+
@@ -25,20 +25,14 @@ function wbf_list_child_pages() {
 global $post; 
 
 if ( is_page() && $post->post_parent )
-
 	$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
 else
 	$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-
 if ( $childpages ) {
-
 	$string = '<ul>' . $childpages . '</ul>';
 }
-
 return $string;
-
 }
-
 add_shortcode('wbf_childpages', 'wbf_list_child_pages');
 
 // Disable File Edits
