@@ -1,6 +1,6 @@
 <?php
 
-/*
+/**
  * Plugin Name: Webfronten Site Codes
  * Plugin URI: https://github.com/Webfronten/Site-Codes/
  * Description: Site specific code changes for websites build by Webfronten.
