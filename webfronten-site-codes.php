@@ -4,9 +4,9 @@
  * Plugin Name: Webfronten Site Codes
  * Plugin URI: https://github.com/Webfronten/Site-Codes/
  * Description: Site specific code changes for websites build by Webfronten.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: Torben Heikel Vinther
- * Author URI: http://www.webfronten.dk/
+ * Author URI: https://www.webfronten.dk/
  * License: GPL v2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: webfronten-site-codes
