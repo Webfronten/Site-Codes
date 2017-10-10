@@ -4,7 +4,7 @@
  * Plugin Name: Webfronten Site Codes
  * Plugin URI: https://github.com/Webfronten/Site-Codes/
  * Description: Site specific code changes for websites build by Webfronten.
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: Webfronten
  * Author URI: https://www.webfronten.dk/
  * License: GPL v2+
@@ -18,6 +18,12 @@ if( !defined( 'ABSPATH' ) ) exit;
 
 // Disable File Edits
 define('DISALLOW_FILE_EDIT', true);
+
+// Empty trash
+define( 'EMPTY_TRASH_DAYS', 7 );
+
+// Enable core updates for minor releases (default):
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
