@@ -4,7 +4,7 @@
  * Plugin Name: Webfronten Site Codes
  * Plugin URI: https://github.com/Webfronten/Site-Codes/
  * Description: Site specific code changes for websites build by Webfronten.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: Torben Heikel Vinther
  * Author URI: https://www.webfronten.dk/
  * License: GPL v2+
@@ -43,3 +43,26 @@ function wbf_show_sitename( ) {
    return get_bloginfo( 'name' );
 }
 add_shortcode( 'site_name', 'wbf_show_sitename' );
+
+// Display copyright with start and current year
+function wbf_copyright() {
+	global $wpdb;
+	$copyright_dates = $wpdb->get_results("
+	SELECT
+	YEAR(min(post_date_gmt)) AS firstdate,
+	YEAR(max(post_date_gmt)) AS lastdate
+	FROM
+	$wpdb->posts
+	WHERE
+	post_status = 'publish'
+	");
+	$output = '';
+	if($copyright_dates) {
+		$copyright = "&copy; " . $copyright_dates[0]->firstdate;
+		if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+			$copyright .= '-' . $copyright_dates[0]->lastdate;
+		}
+		$output = $copyright;
+	}
+	return $output;
+}
