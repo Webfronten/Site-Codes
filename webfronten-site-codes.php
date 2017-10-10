@@ -16,15 +16,6 @@
 // Exit if accessed directly.
 if( !defined( 'ABSPATH' ) ) exit;
 
-// Disable File Edits
-define('DISALLOW_FILE_EDIT', true);
-
-// Empty trash
-define( 'EMPTY_TRASH_DAYS', 7 );
-
-// Enable core updates for minor releases (default):
-define( 'WP_AUTO_UPDATE_CORE', 'minor' );
-
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
 
