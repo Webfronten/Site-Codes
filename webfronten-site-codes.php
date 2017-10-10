@@ -66,4 +66,4 @@ function wbf_copyright() {
 	}
 	return $output;
 }
-add_shortcode( 'wpf_copyright', 'wbf_copyright' );
+add_shortcode( 'wbf_copyright', 'wbf_copyright' );
