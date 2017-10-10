@@ -66,3 +66,4 @@ function wbf_copyright() {
 	}
 	return $output;
 }
+add_shortcode( 'site_copyright', 'wbf_copyright' );
